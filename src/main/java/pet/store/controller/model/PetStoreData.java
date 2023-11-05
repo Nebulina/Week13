@@ -36,6 +36,7 @@ public class PetStoreData {
 		petStoreZip = petStore.getPetStoreZip();
 		petStorePhone = petStore.getPetStorePhone();
 		
+		
 		for(Customer customer : petStore.getCustomers()) {
 			customers.add(new PetStoreCustomer(customer));
 		}
@@ -55,7 +56,10 @@ public class PetStoreData {
 		private String customerLastName;
 		private String customerEmail;
 		public PetStoreCustomer(Customer customer) {
-			// TODO Auto-generated constructor stub
+			customerId = customer.getCustomerId();
+			customerFirstName = customer.getCustomerFirstName();
+			customerLastName = customer.getCustomerLastName();
+			customerEmail = customer.getCustomerEmail();
 		}
 	}
 
@@ -69,7 +73,11 @@ public class PetStoreData {
 		private String employeePhone;
 		private String employeeJobTitle;
 		public PetStoreEmployee(Employee employee) {
-			// TODO Auto-generated constructor stub
+			employeeId = employee.getEmployeeId();
+			employeeFirstName = employee.getEmployeeFirstName();
+			employeeLastName = employee.getEmployeeLastName();
+			employeePhone = employee.getEmployeePhone();
+			employeeJobTitle = employee.getEmployeeJobTitle();
 		}
 	}
 	
